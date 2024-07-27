@@ -17,15 +17,15 @@ shinyUI(fluidPage(
       actionButton("predict", "Predict")
     ),
     
-    # mainPanel(
-    #   h3("Survival Scatter Plot"),
-    #   uiOutput("prediction_result"),
     mainPanel(
-      div(
-        h3("Prediction Result:"),
-        uiOutput("prediction_result"),
-        style = "display: flex; align-items: center;"
-      ),
+      h3("Survival Scatter Plot"),
+      h3(uiOutput("prediction_result")),
+    # mainPanel(
+    #   div(
+    #     h3("Prediction Result:"),
+    #     uiOutput("prediction_result"),
+    #     style = "display: flex; align-items: center;"
+      # ),
 
       p("The plot below shows the distribution of survival predictions based on the input parameters. The red dot represents the current input values."),
       plotOutput("plot"),
