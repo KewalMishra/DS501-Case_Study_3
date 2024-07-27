@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
     color <- ifelse(survival == "Survived", "green", "red")
     
     output$prediction_result <- renderUI({
-      HTML(paste("<b>Prediction Results: </b><span style='color:", color, "'>", survival, "</span>"))
+      HTML(paste("<span style='color:", color, "'>", survival, "</span>"))
     })
     
     output$plot <- renderPlot({
@@ -36,7 +36,7 @@ shinyServer(function(input, output) {
           title = "Titanic Survival Prediction",
           x = "Age",
           y = "Fare",
-          caption = "The plot shows the distribution of survival predictions based on the input parameters. The red dot represents the current input values."
+          # caption = "The plot shows the distribution of survival predictions based on the input parameters. The red dot represents the current input values."
         )
     })
   })

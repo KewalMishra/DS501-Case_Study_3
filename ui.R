@@ -1,7 +1,6 @@
 library(shiny)
 library(ggplot2)
 
-# Define UI for Titanic Survival Prediction app
 shinyUI(fluidPage(
   titlePanel("Titanic Survival Prediction"),
   
@@ -21,7 +20,6 @@ shinyUI(fluidPage(
     mainPanel(
       h3("Prediction Results"),
       uiOutput("prediction_result"),
-      h4("Titanic Survival Prediction"),
       p("The plot below shows the distribution of survival predictions based on the input parameters. The red dot represents the current input values."),
       plotOutput("plot"),
       
