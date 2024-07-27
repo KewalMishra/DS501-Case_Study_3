@@ -33,10 +33,9 @@ shinyServer(function(input, output) {
         geom_point(alpha = 0.5) +
         geom_point(data = new_data, aes(x = Age, y = Fare), color = "red", size = 5) +
         labs(
-          title = "Titanic Survival Prediction",
+          title = "Survival Scatter Plot",
           x = "Age",
           y = "Fare",
-          # caption = "The plot shows the distribution of survival predictions based on the input parameters. The red dot represents the current input values."
         )
     })
   })
