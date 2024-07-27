@@ -57,11 +57,13 @@ shinyUI(fluidPage(
       p("The algorithm used for this project is Logistic Regression. Logistic Regression is a statistical method for analyzing a dataset in which there are one or more independent variables that determine an outcome. The outcome is measured with a dichotomous variable (in which there are only two possible outcomes)."),
       
       h3("Mathematical/Statistical Details"),
-      p("Logistic Regression works by fitting a logistic function to the data. The logistic function, also known as the sigmoid function, is defined as:"),
-      tags$pre("  \\[ \\sigma(x) = \\frac{1}{1 + e^{-x}} \\]"),
-      p("Where \\( \\sigma(x) \\) is the probability of the outcome, and \\( x \\) is the linear combination of the input features. In this case, the linear combination is:"),
-      tags$pre("  \\[ x = \\beta_0 + \\beta_1 Pclass + \\beta_2 Sex + \\beta_3 Age + \\beta_4 SibSp + \\beta_5 Parch + \\beta_6 Fare \\]"),
-      p("The coefficients \\( \\beta_i \\) are estimated from the data using maximum likelihood estimation. The model predicts the probability of survival, and a threshold (usually 0.5) is applied to classify the outcome as survived or not survived."),
+      withMathJax(
+        p("Logistic Regression works by fitting a logistic function to the data. The logistic function, also known as the sigmoid function, is defined as:"),
+        p("$$\\sigma(x) = \\frac{1}{1 + e^{-x}}$$"),
+        p("Where \\( \\sigma(x) \\) is the probability of the outcome, and \\( x \\) is the linear combination of the input features. In this case, the linear combination is:"),
+        p("$$x = \\beta_0 + \\beta_1 \\text{Pclass} + \\beta_2 \\text{Sex} + \\beta_3 \\text{Age} + \\beta_4 \\text{SibSp} + \\beta_5 \\text{Parch} + \\beta_6 \\text{Fare}$$"),
+        p("The coefficients \\( \\beta_i \\) are estimated from the data using maximum likelihood estimation. The model predicts the probability of survival, and a threshold (usually 0.5) is applied to classify the outcome as survived or not survived.")
+      ),
       
       h3("Data Insights"),
       h4("Survival Distribution"),
