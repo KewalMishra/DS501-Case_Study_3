@@ -27,7 +27,7 @@ shinyUI(fluidPage(
       p("This application uses the Titanic dataset to predict the survival of passengers based on various features. Logistic Regression is used as the algorithm to model the probability of survival."),
       p("You can adjust the input parameters on the left to see how they affect the prediction. The red dot on the plot represents the current input values."),
       
-      h3("Data")
+      h3("Data"),
       p("The data used for this project is the Titanic dataset, which is a well-known dataset in the field of data science and machine learning. This dataset contains information about the passengers on the Titanic, including:
 
 PassengerId: A unique identifier for each passenger.
@@ -44,7 +44,7 @@ Cabin: Cabin number.
 Embarked: Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton).
 "),
 
-      h3("Motivation")
+      h3("Motivation"),
       p("The Titanic disaster is one of the most infamous maritime tragedies in history. The dataset provides a rich set of features that can be used to build predictive models and gain insights into the factors that influenced survival. The motivation behind analyzing this dataset includes:
 
 Historical Significance: Understanding the factors that influenced survival can provide historical insights.
