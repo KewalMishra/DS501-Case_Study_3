@@ -39,4 +39,25 @@ shinyServer(function(input, output) {
         )
     })
   })
+  output$survivalPlot <- renderPlot({
+    ggplot(train, aes(x = factor(Survived))) +
+      geom_bar(aes(fill = factor(Survived)), color = "black") +
+      labs(title = "Survival Distribution", x = "Survived", y = "Count", fill = "Survived")
+  })
+  
+  output$agePlot <- renderPlot({
+    ggplot(train, aes(x = Age, fill = factor(Survived))) +
+      geom_histogram(binwidth = 5, color = "black", position = "dodge") +
+      labs(title = "Age Distribution by Survival", x = "Age", y = "Count", fill = "Survived")
+  })
+  
+  output$classPlot <- renderPlot({
+    ggplot(train, aes(x = factor(Pclass), fill = factor(Survived))) +
+      geom_bar(color = "black", position = "dodge") +
+      labs(title = "Class Distribution by Survival", x = "Class", y = "Count", fill = "Survived")
+  })
+  
+  output$modelSummary <- renderPrint({
+    summary(model)
+  })
 })

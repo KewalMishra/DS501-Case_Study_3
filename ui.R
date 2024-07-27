@@ -26,6 +26,20 @@ shinyUI(fluidPage(
       h4("About the Model"),
       p("This application uses the Titanic dataset to predict the survival of passengers based on various features. Logistic Regression is used as the algorithm to model the probability of survival."),
       p("You can adjust the input parameters on the left to see how they affect the prediction. The red dot on the plot represents the current input values.")
+      
+      h3("Data Insights"),
+      h4("Survival Distribution"),
+      plotOutput("survivalPlot"),
+      
+      h4("Age Distribution by Survival"),
+      plotOutput("agePlot"),
+      
+      h4("Class Distribution by Survival"),
+      plotOutput("classPlot"),
+      
+      h4("Model Performance"),
+      verbatimTextOutput("modelSummary")
+
     )
   )
 ))
