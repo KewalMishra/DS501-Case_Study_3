@@ -1,0 +1,1 @@
+Use ```shiny::runGitHub("DS501-Case_Study_3", "KewalMishra")``` in to run the Shiny app.
