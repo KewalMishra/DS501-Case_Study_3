@@ -35,9 +35,11 @@ shinyServer(function(input, output) {
         labs(
           title = "Survival Scatter Plot",
           x = "Age",
-          y = "Fare",
+          y = "Fare"
         )
     })
+  })
+  
   output$survivalPlot <- renderPlot({
     ggplot(train, aes(x = factor(Survived))) +
       geom_bar(aes(fill = factor(Survived)), color = "black") +
