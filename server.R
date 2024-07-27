@@ -38,7 +38,6 @@ shinyServer(function(input, output) {
           y = "Fare",
         )
     })
-  })
   output$survivalPlot <- renderPlot({
     ggplot(train, aes(x = factor(Survived))) +
       geom_bar(aes(fill = factor(Survived)), color = "black") +
