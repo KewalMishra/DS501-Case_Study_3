@@ -42,7 +42,7 @@ Ticket: Ticket number.
 Fare: Amount of money the passenger paid for the ticket.
 Cabin: Cabin number.
 Embarked: Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton).
-")
+"),
 
       h3("Motivation")
       p("The Titanic disaster is one of the most infamous maritime tragedies in history. The dataset provides a rich set of features that can be used to build predictive models and gain insights into the factors that influenced survival. The motivation behind analyzing this dataset includes:
@@ -51,7 +51,7 @@ Historical Significance: Understanding the factors that influenced survival can 
 Predictive Modeling: It serves as an excellent case study for demonstrating predictive modeling techniques.
 Feature Analysis: Exploring which features had the most impact on survival.
 Educational Value: The dataset is commonly used for educational purposes to teach data analysis and machine learning.
-")
+"),
 
       
       h3("Data Insights"),
